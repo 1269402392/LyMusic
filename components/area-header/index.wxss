@@ -1,0 +1,17 @@
+.area-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30rpx;
+}
+.area-header h2 {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+.header-more {
+  display: none;
+  font-weight: bold;
+}
+.header-default:empty + .header-more {
+  display: block;
+}

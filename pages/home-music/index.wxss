@@ -1,0 +1,14 @@
+page {
+  padding: 0 20rpx;
+}
+.van-search {
+  padding: 20rpx 0 !important;
+}
+.banners image {
+  width: 100%;
+  border-radius: 20rpx;
+  transform: translateY(0);
+}
+.song-list {
+  margin-top: 20rpx;
+}

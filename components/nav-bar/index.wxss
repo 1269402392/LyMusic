@@ -1,0 +1,30 @@
+.arrow-icon {
+  display: none;
+  width: 44rpx;
+}
+.navigation {
+  display: flex;
+  text-align: center;
+  color: white;
+  height: 44px;
+}
+.left,
+.right {
+  width: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center {
+  flex: 1;
+  line-height: 44px;
+}
+.center-content {
+  display: none;
+}
+.left-slot:empty + .arrow-icon {
+  display: block;
+}
+.center-slot:empty + .center-content {
+  display: block;
+}

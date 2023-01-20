@@ -1,0 +1,16 @@
+<view style="height: {{statusBarHeight}}px;"></view>
+<view class="navigation">
+  <view class="left">
+    <view class="left-slot">
+      <slot name="left-slot"></slot>
+    </view>
+    <image class="arrow-icon" src="/assets/images/icons/arrow-left.png" mode="widthFix" />
+  </view>
+  <view class="center">
+    <view class="center-slot">
+      <slot name="center-slot"></slot>
+    </view>
+    <view class="center-content">标题</view>
+  </view>
+  <view class="right"></view>
+</view>

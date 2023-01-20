@@ -1,0 +1,23 @@
+function formatDayplays(params) {
+  var isSuperLength = (params + '').length > 4;
+  if (isSuperLength) {
+    return (params / 10000).toFixed(1) + '万';
+  }
+  return params;
+}
+
+function formatTime(params) {
+  var minute = Math.floor(params / 1000 / 60);
+  var second = Math.floor((params / 1000) % 60);
+  return padLeftZero(minute) + ':' + padLeftZero(second);
+}
+
+function padLeftZero(params) {
+  var value = params + '';
+  return ('00' + params).slice(value.length);
+}
+
+module.exports = {
+  formatDayplays: formatDayplays,
+  formatTime: formatTime,
+};

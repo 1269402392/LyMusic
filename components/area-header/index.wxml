@@ -1,0 +1,9 @@
+<view class="area-header">
+  <h2>{{headerLeftTxt}}</h2>
+  <view class="header-default">
+    <slot></slot>
+  </view>
+  <view class="header-more">
+    <view>{{headerRightTxt}}</view>
+  </view>
+</view>

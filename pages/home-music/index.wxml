@@ -1,0 +1,13 @@
+<van-search bind:click-input="handleSearchClick" placeholder="请输入搜索词" shape="round" />
+<swiper class="banners" style="height: {{swiperImageHeight}}px;" circular indicator-dots autoplay>
+  <swiper-item wx:for="{{banners}}" wx:key="bannerId" item-id="{{item.bannerId}}">
+    <image class="swiper-image" mode="widthFix" src="{{item.pic}}" bindload="handleImageLoad"></image>
+  </swiper-item>
+</swiper>
+
+<area-header headerLeftTxt="推荐歌曲" headerRightTxt="更多"></area-header>
+<view class="song-list">
+  <block wx:for="{{ songList }}" wx:key="id">
+    <songs-item item="{{item}}"></songs-item>
+  </block>
+</view>

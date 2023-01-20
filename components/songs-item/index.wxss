@@ -1,0 +1,33 @@
+.songs-item {
+  display: flex;
+  margin-bottom: 15rpx;
+}
+.songs-item image {
+  width: 150rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+.songs-item .description {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.songs-item .description .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.songs-item .description .title {
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.songs-item .description .assistant {
+  font-size: 24rpx;
+  color: #817575;
+}
+.songs-item .description .arrow-right {
+  width: 40rpx;
+}

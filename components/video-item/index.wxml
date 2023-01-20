@@ -1,0 +1,9 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="container-item">
+  <image src="{{item.cover}}" mode="widthFix" alt="{{item.name}}" />
+  <view class="name">{{item.name}} - {{item.artistName}}</view>
+  <view class="item-info">
+    <text>{{format.formatDayplays(item.mv.dayplays)}}</text>
+    <text>{{format.formatTime(item.mv.videos[0].duration)}}</text>
+  </view>
+</view>

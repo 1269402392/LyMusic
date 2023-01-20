@@ -1,0 +1,10 @@
+<view class="songs-item">
+  <image src="{{item.coverImgUrl}}" mode="widthFix"></image>
+  <view class="description">
+    <view class="info">
+      <view class="title">{{item.name}}</view>
+      <view class="assistant">{{item.song.artists[0].name}}</view>
+    </view>
+    <image class="arrow-right" src="../../assets/images/icons/arrow-right.png" mode="widthFix"></image>
+  </view>
+</view>

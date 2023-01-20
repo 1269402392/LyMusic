@@ -1,0 +1,32 @@
+page {
+  padding-top: 235px;
+  padding-bottom: 5px;
+}
+.play-video {
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.video-detail .title {
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.video-detail .title-info {
+  font-weight: bold;
+}
+.author,
+.info {
+  color: #555;
+  font-size: 28rpx;
+  margin-top: 8rpx;
+}
+.recommend-video {
+  padding: 0 25rpx;
+  box-sizing: border-box;
+}
+.recommend-title {
+  font-size: 38rpx;
+  font-weight: bold;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}

@@ -1,0 +1,18 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="video-detail">
+    <video class="play-video" src="{{videoUrl.url}}" referrer-policy="origin" object-fit="fill" autoplay></video>
+    <view class="title">
+        <view class="title-info">{{videoDetail.name}}</view>
+        <view class="author">{{videoDetail.artistName}}</view>
+        <view class="info">
+            {{format.formatDayplays(videoDetail.playCount)}}万次播放 -
+            {{videoDetail.publishTime}}
+        </view>
+    </view>
+    <view class="recommend-video">
+        <view class="recommend-title">推荐视频</view>
+        <block wx:for="{{recommendList}}" wx:key="vid">
+            <recommend-item item="{{item}}"></recommend-item>
+        </block>
+    </view>
+</view>

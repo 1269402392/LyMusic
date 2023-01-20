@@ -1,0 +1,40 @@
+<wxs src="../../utils/format.wxs" module="format"></wxs>
+<view class="play-misic">
+  <image class="back-image" mode="aspectFill" src="{{songsInfo.al.picUrl}}" alt="" />
+  <view class="back-cover"></view>
+</view>
+
+<nav-bar>
+  <image slot="left-slot" bindtap="backHomeView" class="arrow-icon" src="/assets/images/icons/arrow-left.png" mode="widthFix" />
+  <view slot="center-slot" class="tab">
+    <view class="tab-left {{ currentTab === 0 ? 'tab-active' : ''}}">歌曲</view>
+    <view class="drive">|</view>
+    <view class="tab-right {{ currentTab === 1 ? 'tab-active' : ''}}">歌词</view>
+  </view>
+</nav-bar>
+
+<swiper class="content" style="height: {{contentHeight}}px;" bindchange="handlerSwiperChange">
+  <swiper-item class="cover">
+    <image class="cover-image" src="{{songsInfo.al.picUrl}}" mode="widthFix" />
+    <view class="play-info">
+      <view class="title">{{songsInfo.name}} </view>
+      <view class="author">{{songsInfo.ar[0].name}}</view>
+      <view class="album">专辑: 《 {{songsInfo.al.name}} 》</view>
+      <slider bindchange="handlerSliderChange" bindchanging="sliderChanging" block-size="{{10}}" class="play-slider" max="{{song.time}}" value="{{sliderValue}}" />
+      <view class="time-section">
+        <view class="start">{{format.formatTime(sliderValue)}}</view>
+        <view class="end">{{format.formatTime(song.time)}}</view>
+      </view>
+      <view class="utils-box">
+        <image bindtap="handlePlayClick" class="resume" src="/assets/images/player/play_{{isPlay ? 'pause' : 'resume'}}.png" mode="widthFix" />
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="lyric-list" enhanced show-scrollbar="{{false}}" scroll-y scroll-top="{{(currentSongIndex - 1) * 35}}" scroll-with-animation>
+      <block wx:for="{{lyricInfo}}" wx:key="index">
+        <view class="info {{ currentSongIndex - 1 === index ? 'active-song' : '' }}" style="padding-top: {{index === 0 ? (contentHeight / 2) - 80 : 0}}px;padding-bottom: {{index === lyricInfo.length - 1 ? (contentHeight / 2) - 80 : 0}}px;" bindtap="lyricLineClick" data-index="{{index}}">{{item.text}}</view>
+      </block>
+    </scroll-view>
+  </swiper-item>
+</swiper>

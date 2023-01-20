@@ -1,0 +1,7 @@
+<view class="recommend-list">
+  <image src="{{item.coverUrl}}" mode="widthFix" class="recommend-images"></image>
+  <view class="recommend-info">
+    <view>{{item.title}}</view>
+    <view>{{item.creator[0].userName}}</view>
+  </view>
+</view>
